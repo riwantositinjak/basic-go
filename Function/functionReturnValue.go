@@ -14,10 +14,14 @@ package main
 import "fmt"
 
 func main() {
-	result := getHello("Riwanto")
-	fmt.Println(result)
+	fmt.Println(getHello("Riwanto"))
+	fmt.Println(getHello(""))
 }
 
 func getHello(name string) string {
-	return "Hello " + name
+	if name == "" {
+		return "Hello, namamu siapa ?"
+	} else {
+		return "Hello " + name
+	}
 }
